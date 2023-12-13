@@ -24,7 +24,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     
           
 #    - name: Delete Old Files
@@ -49,7 +49,7 @@ jobs:
  
  
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
@@ -72,7 +72,7 @@ jobs:
 
                                    
     - name: create workflow artifact #this is created, so if theres an error, you can look back at previous yml
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
        name: workflow_${{ steps.date.outputs.date }}
        path: .github/workflows/m3u8_converter.yml
