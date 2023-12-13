@@ -55,7 +55,7 @@ jobs:
         cache: 'npm'
         
     - name: Get Pluto lists
-      run: npx pluto-iptv 
+      run: npx pluto-iptv  
 
 
     - name: Copy m3u8s
